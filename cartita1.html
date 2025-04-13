@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi pingüino</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .corner-img {
+      width: 120px;
+      position: absolute;
+    }
+    .top-left { top: 0; left: 0; }
+    .top-right { top: 0; right: 0; }
+    .bottom-left { bottom: 0; left: 0; }
+    .bottom-right { bottom: 0; right: 0; }
+
+    .envelope {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .heart {
+      color: red;
+      font-size: 40px;
+    }
+
+    .hidden-message {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 80%;
+      text-align: center;
+      font-style: normal;
+    }
+
+    .hidden-message img {
+      max-width: 300px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="pngwing.com (7).png" class="corner-img top-left">
+  <img src="pngwing.com (2).png" class="corner-img top-right">
+  <img src="pngwing.com (4).png" class="corner-img bottom-left">
+  <img src="pngwing.com (6).png" class="corner-img bottom-right">
+
+  <div class="envelope" onclick="openLetter()" id="letter">
+    <div class="heart">&#10084;</div>
+    <div>Ábreme :3</div>
+  </div>
+
+  <div class="hidden-message" id="message">
+    <h1 style="font-family: Arial, sans-serif;">Eres el mejor novio del mundo ♡♡♡</h1>
+    <img src="WhatsApp Image 2025-04-12 at 9.02.58 PM (2).jpeg" alt="Foto de nosotros">
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById('letter').style.display = 'none';
+      document.getElementById('message').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
